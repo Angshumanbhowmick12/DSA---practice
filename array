@@ -1,0 +1,24 @@
+// second largest element in array
+
+int largest = arr[0];
+		int sLargest = INT_MIN;
+		
+        for(int i=1;i<n;i++){
+            if(arr[i]>largest){
+                sLargest=largest;
+                largest=arr[i];
+            }
+            else if(arr[i]>sLargest && arr[i]<largest ){            // optimal approch o(n)
+           
+                sLargest=arr[i];
+            }
+             
+        }
+        if(sLargest!=INT_MIN){
+            return sLargest;
+        }
+        else{
+            return -1;
+        }
+        
+        
