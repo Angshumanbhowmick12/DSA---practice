@@ -8,7 +8,7 @@ int largest = arr[0];
                 sLargest=largest;
                 largest=arr[i];
             }
-            else if(arr[i]>sLargest && arr[i]<largest ){            // optimal approch o(n)
+            else if(arr[i]>sLargest && arr[i]<largest ){            // optimal approch O(n)
            
                 sLargest=arr[i];
             }
@@ -21,4 +21,19 @@ int largest = arr[0];
             return -1;
         }
         
+	
+//better approch 
+int largest =a[0];
+for(int i=0; i<n;i++){
+    if (a[i]>largest){
+    largest=a[i];
+   }
+}
+sLargest=-1;
+for(i=0;i<n;i++){
+ if(a[i]<largest && a[i]!=largest){   // O(n+n)=O(2n)
+    sLargest=a[i];
+ }
+ 
+}
         
